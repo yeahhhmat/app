@@ -2,16 +2,22 @@ import React, { useState } from "react";
 import { Message } from "../../message";
 import { messages, notEmpty } from "../../../lib/messages";
 import Link from "next/link";
-
+import { appConfig, useStore } from "../../../lib/appconfig";
 /**
  * 
  * @param {{imgSrc:String,imgAlt:String,title:String,prePrice:String,price:String,path:String}} props
  * @returns JSX.Element
  */
 export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path}) {
-  console.log(path)
+  const baseCN = (cn) => 'productForProductGrid_' + cn;
+  const state_productForProductGrid_textAlignment = useStore((state) => state.state_productForProductGrid_textAlignment)
+  const safeTextAlign = (
+    state_productForProductGrid_textAlignment ||
+    appConfig.style_productForProductGrid_textAlignment
+  ) || 'left' ;
+
   const TheActualProduct = (
-    <>
+    <div id={baseCN('productCard')}>
      {notEmpty(imgSrc) && notEmpty(imgAlt) && (
         <img 
           src={notEmpty(imgSrc) && imgSrc} 
@@ -20,7 +26,7 @@ export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path})
         />
       )}
       {notEmpty(title) && (
-        <p className="text-sm font-medium leading-none mt-3 text-gray-800">
+        <p id="productForProductGrid_productTitle" className="text-sm font-medium leading-none mt-3 text-gray-800">
           {title}
         </p>
       )}
@@ -29,14 +35,15 @@ export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path})
           {notEmpty(prePrice) && prePrice} &nbsp; {notEmpty(price) && price}
         </p>
       )}
-    </>
+    </div>
   );
+
   return (
     <div className="lg:w-72 md:pr-8" id="app_product-for-product-grid">
-      {notEmpty(path) ? <Link href={path}><a>{TheActualProduct}</a></Link> : {TheActualProduct}}
-      <style jsx>{`
-        #app_product-for-product-grid span {
-          text-align: center;
+      {notEmpty(path) ? <Link href={path}><a>{TheActualProduct}</a></Link> : <div>{TheActualProduct}</div>}
+       <style>{`
+         #productForProductGrid_productCard p {
+          text-align: ${safeTextAlign};
         }
       `}</style>
     </div>

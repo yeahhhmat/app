@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useUser } from '../../lib/hooks'
 import { LogoutIcon, UserIcon } from '../icons'
 import { Message } from '../message'
-import { appConfig } from '../../lib/app.config';
+import { appConfig } from '../../lib/appconfig';
 
 export const Header = () => {
   const user = useUser()
@@ -14,11 +14,13 @@ export const Header = () => {
         <ul className='flex justify-between'>
           <li>
             <Link href="/">
+              <a>
               <Message
                 className={''}
                 message={'Home'}
                 origin={'location.test'}
               />
+              </a>
             </Link>
           </li>
 
