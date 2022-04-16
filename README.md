@@ -1,5 +1,9 @@
-### TEST USERS
+# App 
 
-**UN/PW**
-BASIC: app_user1267/ShHD0nTS5aR3
-ADMIN: admin_user1267/ShHD0nTS5aR3
+[![](https://img.shields.io/badge/license-WTFPL-green)](http://www.wtfpl.net/)
+
+wip: e-commerce store 
+
+## Development Docs
+- [messages](https://github.com/yeahmat/app/blob/main/static/docs/messages.md)
+- [user auth](https://github.com/yeahmat/app/blob/main/static/docs/user-auth.md)
