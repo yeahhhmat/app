@@ -1,0 +1,5 @@
+### TEST USERS
+
+**UN/PW**
+BASIC: app_user1267/ShHD0nTS5aR3
+ADMIN: admin_user1267/ShHD0nTS5aR3
