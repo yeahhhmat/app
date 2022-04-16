@@ -1,11 +1,52 @@
 import React, { useState } from "react";
 import { Message } from "../../message";
-import { messages } from "../../../lib/messages";
+import { messages, notEmpty } from "../../../lib/messages";
+import Link from "next/link";
+
+/**
+ * 
+ * @param {{imgSrc:String,imgAlt:String,title:String,prePrice:String,price:String,path:String}} props
+ * @returns JSX.Element
+ */
+export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path}) {
+  console.log(path)
+  const TheActualProduct = (
+    <>
+     {notEmpty(imgSrc) && notEmpty(imgAlt) && (
+        <img 
+          src={notEmpty(imgSrc) && imgSrc} 
+          alt={notEmpty(imgAlt) ? imgAlt : title} 
+          className="w-full"
+        />
+      )}
+      {notEmpty(title) && (
+        <p className="text-sm font-medium leading-none mt-3 text-gray-800">
+          {title}
+        </p>
+      )}
+      {notEmpty(price) && (
+        <p className="text-xs font-medium leading-3 text-gray-600 mt-2">
+          {notEmpty(prePrice) && prePrice} &nbsp; {notEmpty(price) && price}
+        </p>
+      )}
+    </>
+  );
+  return (
+    <div className="lg:w-72 md:pr-8" id="app_product-for-product-grid">
+      {notEmpty(path) ? <Link href={path}><a>{TheActualProduct}</a></Link> : {TheActualProduct}}
+      <style jsx>{`
+        #app_product-for-product-grid span {
+          text-align: center;
+        }
+      `}</style>
+    </div>
+  )
+}
 
 export default function ProductGrid() {
   return (
     <div className="lg:px-20 md:px-6 px-4 py-12">
-      { messages && (
+      {messages && (
         <h1>
           <Message
             className={'lg:text-4xl md:text-2xl text-xl font-medium lg:leading-9 md:leading-6 leading-4 text-gray-800'}
@@ -15,14 +56,27 @@ export default function ProductGrid() {
         </h1>
       )}
       
-      { messages && (
-        <p>
-          <Message 
-            className="text-base leading-6 mt-4 text-gray-600"
-          />
-        </p>
+      {messages && (
+        <div className="md:w-6/12">
+          <p>
+            <Message 
+              className="text-base leading-6 mt-4 text-gray-600"
+              message={messages.home_categorySubtitle}
+              origin={'messages.home_categorySubtitle'}
+            />
+          </p>
+        </div>
       )}
+
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6 gap-8">
+        <ProductForProductGrid 
+          imgSrc={'https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-1.png'}
+          imgAlt={'table image'}
+          title={'Retro Lamp'}
+          prePrice={'From'}
+          price={'$340'}
+          path={'/somewhere'}
+        />
         <div className="lg:w-72 md:pr-8">
           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-1.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Retro Lamp</p>
