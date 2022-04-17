@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useUser } from '../../lib/hooks'
-import { LogoutIcon, UserIcon } from '../icons'
+import { LogoutIcon, UserIcon } from '../general/icons'
 import { Message } from '../message'
 import { appConfig } from '../../lib/appconfig';
 

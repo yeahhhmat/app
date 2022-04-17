@@ -8,13 +8,18 @@ import { appConfig, useStore } from "../../../lib/appconfig";
  * @param {{imgSrc:String,imgAlt:String,title:String,prePrice:String,price:String,path:String}} props
  * @returns JSX.Element
  */
-export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path}) {
+export function ProductForProductGrid({
+  imgSrc,
+  imgAlt,
+  title,
+  prePrice,
+  price,
+  path,
+  adminPreviewTextAlign
+}) {
   const baseCN = (cn) => 'productForProductGrid_' + cn;
   const state_productForProductGrid_textAlignment = useStore((state) => state.state_productForProductGrid_textAlignment)
-  const safeTextAlign = (
-    state_productForProductGrid_textAlignment ||
-    appConfig.style_productForProductGrid_textAlignment
-  ) || 'left' ;
+  const safeTextAlign = (appConfig.style_productForProductGrid_textAlignment) || 'left' ;
 
   const TheActualProduct = (
     <div id={baseCN('productCard')}>
@@ -32,7 +37,7 @@ export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path})
       )}
       {notEmpty(price) && (
         <p className="text-xs font-medium leading-3 text-gray-600 mt-2">
-          {notEmpty(prePrice) && prePrice} &nbsp; {notEmpty(price) && price}
+          {notEmpty(prePrice) && prePrice}&nbsp;{notEmpty(price) && price}
         </p>
       )}
     </div>
@@ -43,7 +48,7 @@ export function ProductForProductGrid({imgSrc,imgAlt,title,prePrice,price,path})
       {notEmpty(path) ? <Link href={path}><a>{TheActualProduct}</a></Link> : <div>{TheActualProduct}</div>}
        <style>{`
          #productForProductGrid_productCard p {
-          text-align: ${safeTextAlign};
+          text-align: ${adminPreviewTextAlign || safeTextAlign};
         }
       `}</style>
     </div>

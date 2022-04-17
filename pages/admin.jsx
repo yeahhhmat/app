@@ -1,11 +1,11 @@
-import { AppConfig, ProductForm } from "../components/adminforms";
+import { AppConfig, ProductForm } from "../components/admin/adminforms";
+import { AdminLayout } from "../components/admin/adminlayout";
 
 
 export default function AdminPage() {
   return (
-    <div>
-      <ProductForm />
+    <AdminLayout>
       <AppConfig />
-    </div>
+    </AdminLayout>
   )
 }
