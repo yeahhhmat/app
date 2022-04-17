@@ -4,7 +4,7 @@
  * @returns JSX.Element
  */
 export const RadioInput = ({generalName, value, onChange, checked, label}) => (
-  <div class="flex items-center mb-4">
+  <div className="flex items-center mb-4">
     <input 
       type="radio" 
       name={generalName} 

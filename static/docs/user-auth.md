@@ -21,3 +21,11 @@ Example - when a user is found using `deta.fetch({'username': 'username'})`
   last: undefined
 }
 ```
+
+Role types
+
+- APP_ADMIN - For those who are working on the app itself
+- APP_ADMIN_GUEST - More info soon
+- ADMIN - Shop owner
+- ADMIN_GUEST - More info soon
+- USER - Shop visitor 

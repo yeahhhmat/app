@@ -4,6 +4,8 @@ import DashboardIcon from "./dashboardicon";
 import NotificationIcon from "./notificationicon";
 import ProductIcon from "./producticon";
 import WebsiteEditorIcon from "./websiteeditoricon";
+import SearchIcon from "./searchicon";
+import SettingsIcon from "./settingsicon";
 
 export { 
   LogoutIcon,
@@ -11,5 +13,7 @@ export {
   DashboardIcon,
   NotificationIcon,
   ProductIcon,
-  WebsiteEditorIcon
+  WebsiteEditorIcon,
+  SearchIcon,
+  SettingsIcon,
 }
