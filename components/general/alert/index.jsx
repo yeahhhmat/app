@@ -22,27 +22,16 @@ const WarningAlert = ({children}) => (
   </div>
 )
 
-export const Alert = ({theme,children}) => {
-
-  return (
-    <>
-      {   theme==='info' 
-        ? <InfoAlert children={children}/>
-        : theme==='danger' 
-        ? <DangerAlert children={children}/>
-        : theme==='success'
-        ? <SuccessAlert children={children}/>
-        : theme==='warning'
-        ? <WarningAlert children={children}/>
-        : <InfoAlert children={children}/>
-      }
-
-      <div className="p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800" role="alert">
-        {children}
-      </div>
-      <div className="p-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300" role="alert">
-        {children}
-      </div>
-    </>
-  )
-}
+export const Alert = ({theme,children}) => (
+  <>{   
+    theme==='info' 
+    ? <InfoAlert children={children}/>
+    : theme==='danger' 
+    ? <DangerAlert children={children}/>
+    : theme==='success'
+    ? <SuccessAlert children={children}/>
+    : theme==='warning'
+    ? <WarningAlert children={children}/>
+    : <InfoAlert children={children}/>
+  }</>
+)

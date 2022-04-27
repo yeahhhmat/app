@@ -1,4 +1,4 @@
-import Delegator from '../../delegator'
+import Delegator from '../../../delegator'
 import AdminFooter from '../adminfooter'
 import AdminHeader from '../adminheader'
 
