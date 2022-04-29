@@ -10,30 +10,20 @@ export function ZenText ({ scrollable = 2000 }){
     <div style={{height: '5000px'}}>
     <ZenTextContainer style={{ height: scrollable + 'px' }}>
       <ZenTextWrapper id='zentext-wrapper'>
-        <p style={{
-          opacity: `${
-            ewGrossMath({startingPos: 1000, pos: position }) < 100 
-            ? '.' + ewGrossMath({startingPos: 1000, pos: position })
-            : ewGrossMath({startingPos: 1000, pos: position })
-          }`
+        <div className="flex flex-col" style={{
+          opacity: `${zenable({startingPos: 1000, pos: position })}`
         }}>
-          {'Opacity would be:'} {position && ewGrossMath({startingPos: 1000, pos: position })}
-        </p>
+          <p>{zenable({startingPos: 1000, pos: position })}</p>
+          <br/>
+          <p>{'Current Position: '} {position}</p>
+        </div>
         
         <br/>
-
-        <p id='zenable'>
-          {'Current Position: '} {position} {zenable({startingPos: 1000, pos: position })}
-        </p>
-
       </ZenTextWrapper>
       <style>{`
         #zentext-wrapper {
           top: ${height / 2 + 'px'};
-        }
-        #zenable {
-          opacity: ${ewGrossMath({startingPos: 1000, pos: position })}
-        }
+        }    
       `}</style>
     </ZenTextContainer>
     </div>
