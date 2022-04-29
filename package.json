@@ -9,6 +9,7 @@
     "@dicebear/avatars": "^4.10.2",
     "@dicebear/avatars-identicon-sprites": "^4.10.2",
     "@hapi/iron": "6.0.0",
+    "clsx": "^1.1.1",
     "cookie": "0.4.1",
     "deta": "^1.1.0",
     "next": "^12.1.5",

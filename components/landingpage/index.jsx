@@ -10,6 +10,7 @@ import {
 } from "./styles.landingpage";
 import { appConfig, useStore } from "../../lib/appconfig"
 import { TableView } from "../tableview";
+import { ZenText } from "../zentext";
 
 export default function AdminLandingPage() {
   const state_landingpageModule = useStore((state) => state.state_landingpageModule)
@@ -44,6 +45,7 @@ export default function AdminLandingPage() {
         </Centered>
 
         <TableView />
+        <ZenText />
       </LandingPageWrapper>
     </PageWrapper>
   )
