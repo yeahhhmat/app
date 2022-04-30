@@ -7,7 +7,7 @@ export function zenable({ startingPos, pos }) {
   if(!pos)          {return console.error('No position was passed to zenable')};
   
   if (between(pos, {min: 1000, max: 1200})) {
-    return '.0';
+    return '0';
   }
   // climb
   else if (between(pos, {min: 1200, max: 1800})){

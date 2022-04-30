@@ -8,7 +8,7 @@ export const ZenTextWrapper = ({ children, ...rest }) => (
   <div 
     {...rest} 
     className={clsx(
-      'border border-black', /** borders */
+      // 'border border-black', /** borders */
       'fixed right-1/2 left-1/2', /** positioning */
       'flex justify-center items-center', /** center content */
       'md:max-w-96 md:w-96 w-full px-4' /** width & padding */
