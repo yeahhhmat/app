@@ -1,9 +1,10 @@
 /* deps */
 import Link from "next/link";
 /* DEPRECATED components */
-import { Button } from "../general/button";
+import { Button } from "../../components/general/button";
 /* hooks */
 import { useWindowSize } from "./hook.windowsize";
+import { useUser } from "../../lib/hooks";
 /* styles */
 import {
   LandingPageWrapper,
@@ -15,8 +16,15 @@ import {
   Centered
 } from "./styles.landingpage";
 
-export default function AdminLandingPage() {  
+export default function LandingPage() {
   const { width, height } = useWindowSize();
+  const user = useUser();
+
+  const DelegateButton = (
+    <Link href={ !user ? '/login' : '/dashboard' }>
+      <SignInButton>{ !user ? 'Get Started' : 'Go to your Dashboard'}</SignInButton>
+    </Link>
+  );
 
   return (
     <PageWrapper>
@@ -29,14 +37,12 @@ export default function AdminLandingPage() {
             {'This is just a landing page'}
           </LandingPageTitle>
           <LandingPageSubtitle>
-            {'But you can make it anything you want it to be, with your imagination!'}
+            {'But you can make it anything you want it to be, with your imagination! 🌈'}
           </LandingPageSubtitle>
         </LandingPageTitleWrapper>
 
         <Centered>
-          <Link href={'/login'}>
-            <SignInButton>{'Get Started'}</SignInButton>
-          </Link>
+          {DelegateButton}
           <Button theme={'alternative'} type={'button'}>Learn More</Button>
         </Centered>
 
