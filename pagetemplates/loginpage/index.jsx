@@ -7,18 +7,21 @@ import { useWindowSize } from "./hook.windowsize";
 import { useUser } from "../../lib/hooks";
 /* styles */
 import {
-  LandingPageWrapper,
-  LandingPageTitleWrapper,
-  LandingPageTitle,
-  LandingPageSubtitle,
+  LoginPageWrapper,
+  LoginPageTitleWrapper,
+  LoginPageTitle,
+  LoginPageSubtitle,
   PageWrapper,
   SignInButton, 
   Centered
 } from "./styles.landingpage";
+import { Form } from "./components/form";
 
-export default function LandingPage() {
+export default function LoginPage() {
   const { width, height } = useWindowSize();
-  const user = useUser();
+  const user = useUser({
+    redirectIfFound: '/dashboard'
+  });
 
   const DelegateButton = (
     <Link href={ !user ? '/login' : '/dashboard' }>
@@ -28,27 +31,16 @@ export default function LandingPage() {
 
   return (
     <PageWrapper>
-      <LandingPageWrapper style={{
+      <LoginPageWrapper style={{
         height: height + 'px',
         width: width + 'px'
       }}>
-        <LandingPageTitleWrapper>
-          <LandingPageTitle>
-            {'This is just a landing page'}
-          </LandingPageTitle>
-          <LandingPageSubtitle>
-            {'But you can make it anything you want it to be, with your imagination! 🌈'}
-          </LandingPageSubtitle>
-        </LandingPageTitleWrapper>
-
-        <Centered>
-          {DelegateButton}
-          <Button theme={'alternative'} type={'button'}>Learn More</Button>
-        </Centered>
+        
+        <Form />
 
         {/* <TableView /> */}
         {/* <ZenText /> */}
-      </LandingPageWrapper>
+      </LoginPageWrapper>
     </PageWrapper>
   )
 }

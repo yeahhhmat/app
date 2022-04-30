@@ -30,7 +30,7 @@ export const LandingPageTitle = ({ children, ...rest }) => (
 )
 
 export const LandingPageSubtitle =({ children, ...rest }) => (
-  <p {...rest} className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">
+  <p {...rest} className="mt-5 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">
     {children}
   </p>
 )
@@ -42,7 +42,7 @@ export const SignInButton = ({children, ...rest}) => (
 )
 
 export const Centered = ({ children, ...rest }) => (
-  <div className="flex justify-center items-center">
+  <div {...rest} className="flex justify-center items-center">
     {children}
   </div>
 )

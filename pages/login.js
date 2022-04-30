@@ -3,6 +3,7 @@ import Router from 'next/router'
 import { useUser } from '../lib/hooks'
 import Layout from '../components/layout'
 import {SignupForm} from '../components/signupform'
+import LoginPage from '../pagetemplates/loginpage'
 
 const Login = () => {
   useUser({ redirectTo: '/', redirectIfFound: true })
@@ -37,20 +38,12 @@ const Login = () => {
   }
 
   return (
-    <Layout>
-      <div className="login">
-        <SignupForm isLogin errorMessage={errorMsg} onSubmit={handleSubmit} />
-      </div>
-      <style jsx>{`
-        .login {
-          max-width: 21rem;
-          margin: 0 auto;
-          padding: 1rem;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-        }
-      `}</style>
-    </Layout>
+    <LoginPage/>
+    // <Layout>
+    //   <div className="login">
+    //     <SignupForm isLogin errorMessage={errorMsg} onSubmit={handleSubmit} />
+    //   </div>      
+    // </Layout>
   )
 }
 

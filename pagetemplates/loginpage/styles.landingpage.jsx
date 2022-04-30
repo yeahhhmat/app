@@ -8,7 +8,7 @@ export const PageWrapper = ({ children, ...rest }) => (
   </div>
 )
 
-export const LandingPageWrapper = ({ children, ...rest }) => (
+export const LoginPageWrapper = ({ children, ...rest }) => (
   <div 
     {...rest} 
     className="container mx-auto flex flex-col items-center justify-center py-12 sm:py-24"
@@ -17,19 +17,19 @@ export const LandingPageWrapper = ({ children, ...rest }) => (
   </div>
 )
 
-export const LandingPageTitleWrapper = ({ children, ...rest }) => (
+export const LoginPageTitleWrapper = ({ children, ...rest }) => (
   <div {...rest} className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
     {children}
   </div>
 )
 
-export const LandingPageTitle = ({ children, ...rest }) => (
+export const LoginPageTitle = ({ children, ...rest }) => (
   <h1 {...rest} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 font-black leading-7 md:leading-10">
     {children}
   </h1>
 )
 
-export const LandingPageSubtitle =({ children, ...rest }) => (
+export const LoginPageSubtitle =({ children, ...rest }) => (
   <p {...rest} className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">
     {children}
   </p>
