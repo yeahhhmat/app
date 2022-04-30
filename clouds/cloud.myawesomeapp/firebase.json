@@ -3,7 +3,7 @@
     "public": "public",
     "rewrites": [
       {
-        "source": "/hello-world",
+        "source": "**",
         "function": "app"
       }
     ],

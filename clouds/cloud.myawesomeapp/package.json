@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "dev": "firebase serve --only functions,hosting"
+    "dev": "firebase serve --only functions,hosting",
+    "deploy": "firebase deploy"
   }
 }
