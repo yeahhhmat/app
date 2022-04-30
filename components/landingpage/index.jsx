@@ -1,51 +1,47 @@
+/* deps */
+import Link from "next/link";
+/* DEPRECATED components */
 import { Button } from "../general/button";
-import Modal from "../general/modal";
-import { Centered } from "../admin/adminlayout/styles.global";
+/* hooks */
+import { useWindowSize } from "./hook.windowsize";
+/* styles */
 import {
   LandingPageWrapper,
   LandingPageTitleWrapper,
   LandingPageTitle,
   LandingPageSubtitle,
-  PageWrapper, 
+  PageWrapper,
+  SignInButton, 
+  Centered
 } from "./styles.landingpage";
-import { appConfig, useStore } from "../../lib/appconfig"
-import { TableView } from "../tableview";
-import { ZenText } from "../zentext";
 
-export default function AdminLandingPage() {
-  const state_landingpageModule = useStore((state) => state.state_landingpageModule)
-  const setState_landingpageModule = useStore((state) => state.setState_landingpageModule);
+export default function AdminLandingPage() {  
+  const { width, height } = useWindowSize();
+
   return (
     <PageWrapper>
-      <LandingPageWrapper>
-        {state_landingpageModule && 
-          <Modal handleClose={() => setState_landingpageModule(!state_landingpageModule)}>
-            Hello!
-          </Modal>
-        }
+      <LandingPageWrapper style={{
+        height: height + 'px',
+        width: width + 'px'
+      }}>
         <LandingPageTitleWrapper>
-          <LandingPageTitle />
+          <LandingPageTitle>
+            {'This is just a landing page'}
+          </LandingPageTitle>
           <LandingPageSubtitle>
-            {'Hello world, '}
+            {'But you can make it anything you want it to be, with your imagination!'}
           </LandingPageSubtitle>
         </LandingPageTitleWrapper>
 
         <Centered>
-          <Button 
-            theme={'info'} 
-            type={'button'}
-            onClick={() => {
-              console.log(!state_landingpageModule)
-              setState_landingpageModule(!state_landingpageModule)
-            }}
-          >
-              Get Started
-          </Button>
+          <Link href={'/login'}>
+            <SignInButton>{'Get Started'}</SignInButton>
+          </Link>
           <Button theme={'alternative'} type={'button'}>Learn More</Button>
         </Centered>
 
-        <TableView />
-        <ZenText />
+        {/* <TableView /> */}
+        {/* <ZenText /> */}
       </LandingPageWrapper>
     </PageWrapper>
   )
