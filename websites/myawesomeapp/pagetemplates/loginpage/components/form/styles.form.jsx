@@ -55,7 +55,9 @@ export const Input = ({...rest}) => (
 )
 
 export const ErrorMessage = ({children,...rest}) => (
-  <p {...rest} className="mt-2 text-sm text-red-600 dark:text-red-500">{children}</p>
+  <p {...rest} className="mt-2 text-sm text-red-600 dark:text-red-500">
+    {children}
+  </p>
 )
 
 export const SectionWrapper = ({children, ...rest}) =>(
