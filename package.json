@@ -3,6 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "websites/*"
-  ]
+    "websites/*",
+    "clouds/*"
+  ],
+  "scripts": {
+    "dev:website:myawesomeapp": "cd ./websites/myawesomeapp && npm run dev",
+    "build:website:myawesomeapp": "cd ./websites/myawesomeapp && npm run build",
+    "start:website:myawesomeapp": "cd ./websites/myawesomeapp && npm run start",
+    "lint:cloud:myawesomeapp": "cd ./clouds/cloud.myawesomeapp/functions && npm run lint",
+    "lint:website:myawesomeapp": "cd ./websites/myawesomeapp && npm run lint",
+    "lint:all": "npm run lint:cloud:myawesomeapp && npm run lint:website:myawesomeapp",
+    "ci:website:myawesomeapp": "cd ./websites/myawesomeapp && rm -rf node_modules .next package-lock.json && npm install",
+    "ci:cloud:myawesomeapp": "cd ./clouds/cloud.myawesomeapp && rm -rf node_modules package-lock.json && npm install",
+    "ci:cloud:myawesomeapp:functions": "cd ./clouds/cloud.myawesomeapp/functions && rm -rf node_modules package-lock.json && npm install",
+    "ci:root": "rm -rf package-lock.json node_modules && npm install",
+    "ci:all": "npm run ci:website:myawesomeapp && npm run ci:cloud:myawesomeapp && npm run ci:cloud:myawesomeapp:functions && npm run ci:root"
+  }
 }
