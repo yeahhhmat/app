@@ -25,13 +25,13 @@ const WarningAlert = ({children}) => (
 export const Alert = ({theme,children}) => (
   <>{   
     theme==='info' 
-    ? <InfoAlert children={children}/>
+    ? <InfoAlert>{children}</InfoAlert>
     : theme==='danger' 
-    ? <DangerAlert children={children}/>
+    ? <DangerAlert>{children}</DangerAlert>
     : theme==='success'
-    ? <SuccessAlert children={children}/>
+    ? <SuccessAlert>{children}</SuccessAlert>
     : theme==='warning'
-    ? <WarningAlert children={children}/>
-    : <InfoAlert children={children}/>
+    ? <WarningAlert>{children}</WarningAlert>
+    : <InfoAlert>{children}</InfoAlert>
   }</>
 )

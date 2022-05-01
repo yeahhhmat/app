@@ -68,7 +68,7 @@ export function TableView() {
               <td className="pl-4">1</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice.png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice.png" /> */}
                   Miracle Botos
                 </div>
               </td>
@@ -126,7 +126,7 @@ export function TableView() {
               <td className="pl-4">2</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(1).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(1).png" /> */}
                   Tiana Levin
                 </div>
               </td>
@@ -184,7 +184,7 @@ export function TableView() {
               <td className="pl-4">3</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(2).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(2).png" /> */}
                   Jordyn Korsgaard
                 </div>
               </td>
@@ -242,7 +242,7 @@ export function TableView() {
               <td className="pl-4">4</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(3).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(3).png" /> */}
                   Kierra Curtis
                 </div>
               </td>
@@ -300,7 +300,7 @@ export function TableView() {
               <td className="pl-4">5</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(4).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(4).png" /> */}
                   Terry Ekstrom Bothman
                 </div>
               </td>
@@ -358,7 +358,7 @@ export function TableView() {
               <td className="pl-4">6</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(6).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(6).png" /> */}
                   Corey Vetrovs
                 </div>
               </td>
@@ -416,7 +416,7 @@ export function TableView() {
               <td className="pl-4">7</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(7).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(7).png" /> */}
                   Zain George
                 </div>
               </td>
@@ -474,7 +474,7 @@ export function TableView() {
               <td className="pl-4">8</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(8).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(8).png" /> */}
                   Angel Saris
                 </div>
               </td>
@@ -532,7 +532,7 @@ export function TableView() {
               <td className="pl-4">9</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(9).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(9).png" /> */}
                   Desirae Dorwart
                 </div>
               </td>
@@ -590,7 +590,7 @@ export function TableView() {
               <td className="pl-4">10</td>
               <td className="pl-11">
                 <div className="flex items-center">
-                  <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(10).png" />
+                  {/* <img className="shadow-md rounded-full w-10 h-10 mr-3" src="https://cdn.tuk.dev/assets/templates/olympus/invoice(10).png" /> */}
                   Desirae Dorwart
                 </div>
               </td>

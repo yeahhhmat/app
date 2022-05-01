@@ -7,7 +7,7 @@ export default function ProductForm() {
         <div className="bg-white border rounded-md shadow sm:h-auto w-10/12 md:w-8/12 lg:w-1/2 2xl:w-2/5">
           <div className="bg-gray-100 rounded-tl-md rounded-tr-md px-4 md:px-8 md:py-4 py-7 flex items-center justify-between">
             <p className="text-base font-semibold">Create New User</p>
-            <button onclick="popuphandler(false)" className="focus:outline-none">
+            <button onClick="popuphandler(false)" className="focus:outline-none">
               <svg width={28} height={28} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 7L7 21" stroke="#A1A1AA" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M7 7L21 21" stroke="#A1A1AA" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
@@ -47,7 +47,7 @@ export default function ProductForm() {
               </div>
             </form>
             <div className="flex items-center justify-between mt-9">
-              <button onclick="popuphandler(false)" className="px-6 py-3 bg-gray-400 hover:bg-gray-500 shadow rounded text-sm text-white">
+              <button onClick="popuphandler(false)" className="px-6 py-3 bg-gray-400 hover:bg-gray-500 shadow rounded text-sm text-white">
                 Cancel
               </button>
               <button className="px-6 py-3 bg-indigo-700 hover:bg-opacity-80 shadow rounded text-sm text-white">Add User</button>

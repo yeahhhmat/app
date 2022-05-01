@@ -24,13 +24,12 @@ export const AdminNavItemGroup = ({group, onClick}) => {
     <ul className="space-y-2">
       {group && group.length && (
         group.map((item,key) => (
-          <li>
+          <li key={key}>
             <AdminNavItem 
               icon={item.icon}
               navItemName={item.navItemName}
               count={item.count ? item.count : undefined}
               onClick={onClick}
-              key={key}
             />
           </li>
         ))

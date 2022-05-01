@@ -41,13 +41,13 @@ const WarningButton = ({children, type, ...rest}) => (
 export const Button = ({theme,children,type, ...rest}) => (
   <>{   
     theme==='info' 
-    ? <InfoButton children={children} type={type} {...rest}/>
+    ? <InfoButton type={type} {...rest}>{children}</InfoButton>
     : theme==='alternative' 
-    ? <AlternativeButton children={children} {...rest}/>
+    ? <AlternativeButton {...rest}>{children}</AlternativeButton>
     : theme==='danger'
-    ? <DangerButton children={children} {...rest}/>
+    ? <DangerButton {...rest}>{children}</DangerButton>
     : theme==='warning'
-    ? <WarningButton children={children} {...rest}/>
-    : <InfoButton children={children} {...rest}/>
+    ? <WarningButton {...rest}>{children}</WarningButton>
+    : <InfoButton {...rest}>{children}</InfoButton>
   }</>
 )

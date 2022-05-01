@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from 'next/image'
 import { Message } from "../../message";
 import { messages, notEmpty } from "../../../lib/messages";
 import Link from "next/link";
@@ -24,7 +25,7 @@ export function ProductForProductGrid({
   const TheActualProduct = (
     <div id={baseCN('productCard')}>
      {notEmpty(imgSrc) && notEmpty(imgAlt) && (
-        <img 
+        <Image
           src={notEmpty(imgSrc) && imgSrc} 
           alt={notEmpty(imgAlt) ? imgAlt : title} 
           className="w-full"
@@ -90,42 +91,42 @@ export default function ProductGrid() {
           path={'/somewhere'}
         />
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-1.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-1.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Retro Lamp</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $340</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-2.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-2.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Shell Collection</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $140</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-3.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-3.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Elegant Pendant</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $240</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-4.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-4.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Flowering Cactus</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $90</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-1.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-1.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Retro Lamp</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $340</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-2.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-2.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Shell Collection</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $140</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-3.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-3.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Elegant Pendant</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $240</p>
         </div>
         <div className="lg:w-72 md:pr-8">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-4.png" alt="table image" className="w-full" />
+          <Image src="https://tuk-cdn.s3.amazonaws.com/can-uploader/grid-4.png" alt="table image" className="w-full" />
           <p className="text-sm font-medium leading-none mt-3 text-gray-800">Flowering Cactus</p>
           <p className="text-xs font-medium leading-3 text-gray-600 mt-2">From $90</p>
         </div>
