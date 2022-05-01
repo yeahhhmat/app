@@ -16,3 +16,7 @@ This project wouldn't be as awesome as it is without
 - https://deta.sh
 - https://heroicons.com/
 - https://avatars.dicebear.com/
+
+
+## whats in the clouds? 
+A simple json REST API with cache-control 
