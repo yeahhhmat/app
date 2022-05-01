@@ -1,3 +1,5 @@
+import { forwardRef } from "react";
+
 export const TextWrapper = ({children, ...rest}) => (
   <div {...rest} className='pb-4'>
     {children}
@@ -23,10 +25,10 @@ export const FormSubmitButton = ({children, ...rest}) => (
 )
 
 export const FormAltButton = ({children, ...rest}) => (
-  <a {...rest} className='py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'>
+  <a {...rest} className='ml-4 decoration-solid cursor-pointer underline	text-indigo-500	hover:text-indigo-600 active:text-indigo-700 focus:text-indigo-700'>
     {children}
   </a>
-)
+);
 
 export const ItemsCentered = ({ children, ...rest }) => (
   <div {...rest} className="flex items-center">
@@ -61,5 +63,5 @@ export const ErrorMessage = ({children,...rest}) => (
 )
 
 export const SectionWrapper = ({children, ...rest}) =>(
-  <section {...rest}>{children}</section>
+  <section {...rest} className='max-w-md'>{children}</section>
 )

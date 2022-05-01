@@ -3,14 +3,8 @@ import { cloudExample } from '../lib/cloud.example';
 import LandingPage from '../pagetemplates/landingpage'
 import { ZenText } from '../components/zentext';
 const Home = ({example}) => {
-  
   return (
-    <div style={{
-      height: '5000px'
-    }}>
     <LandingPage />
-    <ZenText />
-    </div>
   )
 }
 

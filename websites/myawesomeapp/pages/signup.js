@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Router from 'next/router'
 import { useUser } from '../lib/hooks'
-import Layout from '../components/layout'
-import { SignupForm } from '../components/signupform'
+import LoginPage from '../pagetemplates/loginpage'
 
 const Signup = () => {
   useUser({ redirectTo: '/', redirectIfFound: true })
@@ -42,20 +41,7 @@ const Signup = () => {
   }
 
   return (
-    <Layout>
-      <div className="login">
-        <SignupForm isLogin={false} errorMessage={errorMsg} onSubmit={handleSubmit} />
-      </div>
-      <style jsx>{`
-        .login {
-          max-width: 21rem;
-          margin: 0 auto;
-          padding: 1rem;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-        }
-      `}</style>
-    </Layout>
+    <LoginPage errorMessage={errorMsg} onSubmit={handleSubmit} />
   )
 }
 

@@ -21,7 +21,7 @@ export default function LandingPage() {
   const user = useUser();
 
   const DelegateButton = (
-    <Link href={ !user ? '/login' : '/dashboard' }>
+    <Link href={ !user ? '/signup' : '/dashboard' }>
       <SignInButton>{ !user ? 'Get Started' : 'Go to your Dashboard'}</SignInButton>
     </Link>
   );
@@ -45,9 +45,6 @@ export default function LandingPage() {
           {DelegateButton}
           <Button theme={'alternative'} type={'button'}>Learn More</Button>
         </Centered>
-
-        {/* <TableView /> */}
-        {/* <ZenText /> */}
       </LandingPageWrapper>
     </PageWrapper>
   )

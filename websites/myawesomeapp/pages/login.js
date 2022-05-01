@@ -38,12 +38,7 @@ const Login = () => {
   }
 
   return (
-    <LoginPage/>
-    // <Layout>
-    //   <div className="login">
-    //     <SignupForm isLogin errorMessage={errorMsg} onSubmit={handleSubmit} />
-    //   </div>      
-    // </Layout>
+    <LoginPage isLogin errorMsg={errorMsg} onSubmit={handleSubmit} />
   )
 }
 

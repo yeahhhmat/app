@@ -1,45 +1,19 @@
-/* deps */
-import Link from "next/link";
-/* DEPRECATED components */
-import { Button } from "../../components/general/button";
+/* components */
+import { Form } from "./components/form";
 /* hooks */
 import { useWindowSize } from "./hook.windowsize";
-import { useUser } from "../../lib/hooks";
 /* styles */
-import {
-  LoginPageWrapper,
-  LoginPageTitleWrapper,
-  LoginPageTitle,
-  LoginPageSubtitle,
-  PageWrapper,
-  SignInButton, 
-  Centered
-} from "./styles.landingpage";
-import { Form } from "./components/form";
+import { LoginPageWrapper, PageWrapper } from "./styles.landingpage";
 
-export default function LoginPage() {
+export default function LoginPage({ isLogin, errorMessage, onSubmit }) {
   const { width, height } = useWindowSize();
-  const user = useUser({
-    redirectIfFound: '/dashboard'
-  });
-
-  const DelegateButton = (
-    <Link href={ !user ? '/login' : '/dashboard' }>
-      <SignInButton>{ !user ? 'Get Started' : 'Go to your Dashboard'}</SignInButton>
-    </Link>
-  );
-
   return (
     <PageWrapper>
       <LoginPageWrapper style={{
         height: height + 'px',
         width: width + 'px'
       }}>
-        
-        <Form />
-
-        {/* <TableView /> */}
-        {/* <ZenText /> */}
+        <Form isLogin={isLogin} errorMessage={errorMessage} onSubmit={onSubmit} />
       </LoginPageWrapper>
     </PageWrapper>
   )

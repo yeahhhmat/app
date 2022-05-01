@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import { 
   ErrorMessage,
   FormAltButton,
@@ -13,24 +13,26 @@ import {
   FormWrapper, 
   SectionWrapper
 } from './styles.form'
+import { useUser } from '../../../../lib/hooks';
 
 export const Form = ({ isLogin, errorMessage, onSubmit }) => {  
+  useUser({ redirectIfFound: '/dashboard' }); // redirect user if they've already logged in 
   const DelegateLoginMessage = (
     <TextWrapper>
-      <FormTitleText>{ isLogin ? 'Login' : 'Sign up' }</FormTitleText>
-      <FormSubtitleText>{ isLogin ? 'Welcome Back!' : 'It\'s free to join!'}</FormSubtitleText>
+      <FormTitleText>{ isLogin ? 'This is a Log in form' : 'This is a Sign up form' }</FormTitleText>
+      <FormSubtitleText>{ isLogin ? 'Welcome Back!' : 'Go ahead and try it out! We\'ll never share your information.'}</FormSubtitleText>
     </TextWrapper>
   )
   const DelegateLoginButtons = (
     <ItemsCentered>
+      <FormSubmitButton type="submit">
+        {isLogin ? 'Log in' : 'Sign up'}
+      </FormSubmitButton>
       <Link href={isLogin ? "/signup" : "/login"}>
         <FormAltButton>
-          {isLogin ? 'I don\'t have an account' : 'I already have an account'}
+          {isLogin ? 'I don\'t have an account yet.' : 'I already have an account.'}
         </FormAltButton>
       </Link>
-      <FormSubmitButton type="submit">
-        {isLogin ? 'Login' : 'Sign up'}
-      </FormSubmitButton>
     </ItemsCentered>
   )
   return (
