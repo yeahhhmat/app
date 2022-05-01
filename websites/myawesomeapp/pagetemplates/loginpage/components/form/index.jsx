@@ -19,8 +19,8 @@ export const Form = ({ isLogin, errorMessage, onSubmit }) => {
   useUser({ redirectIfFound: '/dashboard' }); // redirect user if they've already logged in 
   const DelegateLoginMessage = (
     <TextWrapper>
-      <FormTitleText>{ isLogin ? 'This is a Log in form' : 'This is a Sign up form' }</FormTitleText>
-      <FormSubtitleText>{ isLogin ? 'Welcome Back!' : 'Go ahead and try it out! We\'ll never share your information.'}</FormSubtitleText>
+      <FormTitleText>{ isLogin ? 'This Is A Log In Form' : 'This Is A Sign Up Form' }</FormTitleText>
+      <FormSubtitleText>{ isLogin ? 'Welcome Back! 🙂' : 'Go ahead and try it out! We\'ll never share your information.'}</FormSubtitleText>
     </TextWrapper>
   )
   const DelegateLoginButtons = (
